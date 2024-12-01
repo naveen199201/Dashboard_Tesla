@@ -51,7 +51,7 @@ const GroupLeaderboard: React.FC = () => {
                 <div>
                   <span className="font-medium">{player.group_name}</span>
                   <div className="text-sm text-gray-500">
-                    Points: {player.points} - {player.accuracy_percentage}%
+                    Points: {player.points_per_user} - {player.accuracy_percentage}%
                     Correct
                   </div>
                 </div>
