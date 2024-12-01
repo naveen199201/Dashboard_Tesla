@@ -3,14 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowTrendUp } from "@fortawesome/free-solid-svg-icons";
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
-interface SidebarProps {
-  items: Array<{
-    label: string;
-    path: string;
-  }>;
-}
 
-const Sidebar: React.FC<SidebarProps> = () => {
+const Sidebar = () => {
   return (
     <div className="flex flex-col justify-between h-full">
     <div className="">
