@@ -36,17 +36,28 @@ const Metrics: React.FC = () => {
           </p>
         </span>
         <span className="bg-white shadow-sm rounded-3xl p-5  h-48">
-          <p className=" text-gray-600 mb-4">
-          Av.Session Length </p><p className="text-black text-3xl font-bold">{metrics?.average_session_length_seconds}
+          <p className=" text-gray-600 mb-4">Av.Session Length </p>
+          <p className="text-black text-3xl font-bold">
+            {metrics?.average_session_length_seconds}
           </p>
         </span>
         <span className="bg-white shadow-sm rounded-3xl p-5  h-48">
-          <p className=" text-gray-600 mb-4">
-          Starting Knowledge </p><p className="text-black text-3xl font-bold">{metrics?.starting_knowledge_percentage}%</p>
+          <p className=" text-gray-600 mb-4">Starting Knowledge </p>
+          <p className="text-black text-3xl font-bold">
+            {metrics?.starting_knowledge_percentage}%
+          </p>
+          <img src="Graph.png" alt="image" className="w-full h-16 m-5" />
         </span>
         <span className="bg-white shadow rounded-3xl p-5  h-48">
-          <p className=" text-gray-600 mb-4">
-          Current Knowledge</p><p className="text-black text-3xl font-bold">{metrics?.current_knowledge_percentage}%</p>
+          <p className=" text-gray-600 mb-4">Current Knowledge</p>
+          <p className="text-black text-3xl font-bold">
+            {metrics?.current_knowledge_percentage}%
+          </p>
+          <img
+            src="Graph.png"
+            alt="image"
+            className="w-full h-16  mt-5 self-end"
+          />
         </span>
         <p className="bg-white shadow-sm rounded-3xl p-5  h-48"></p>
       </h1>

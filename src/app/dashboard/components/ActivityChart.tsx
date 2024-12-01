@@ -123,7 +123,7 @@ const ActivityChart: React.FC = () => {
   };
 
   return (
-    <div style={{ width: "700px", textAlign: "center" }} className="p-6">
+    <div  className="p-6 w-[700px] items-end">
       <div style={{ minWidth: 120 }}>
         <label id="month-select-label">Month</label>
         <select

@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 
 interface HeaderProps {
@@ -9,13 +8,13 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ onDownload }) => {
   return (
     <header className="flex justify-between items-center  ">
-              <h1 className="font-bold text-black my-5 text-2xl">Reports</h1>
-              <button
-        onClick={onDownload}
-        className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
-      >
+      <h1 className="font-bold text-black my-5 text-2xl">Reports</h1>
+      <div className="flex items-center">
+      <img src="Download.png" alt="download" className="w-7 h-6" />
+      <button onClick={onDownload} className=" text-black  py-2 rounded">
         Download
       </button>
+      </div>
     </header>
   );
 };
