@@ -23,7 +23,7 @@ const GroupLeaderboard: React.FC = () => {
 
   const { groups_leaderboard } = data || {};
   console.log(groups_leaderboard);
-  const sortedLeaderboard = [...(groups_leaderboard as unknown[])].sort(
+  const sortedLeaderboard = groups_leaderboard?.sort(
     (a, b) => b.accuracy_percentage - a.accuracy_percentage
   );
 
@@ -37,7 +37,7 @@ const GroupLeaderboard: React.FC = () => {
     <div className="container mx-auto p-6">
       <h2 className="text-md  mb-4 text-gray-500"> Groups Leaderboard</h2>
       <div className="">
-        {sortedLeaderboard.map((player, index) => {
+        {sortedLeaderboard?.map((player, index) => {
           const changeArrow = getArrow(
             player.accuracy_percentage,
             player.previous_accuracy_percentage
