@@ -12,15 +12,14 @@ type Activity = {
 };
 
 const Activity: React.FC = () => {
-  const { data, loading, error } = useFetchJson<{ activity: Activity }>();
+  const { loading, error } = useFetchJson<{ activity: Activity }>();
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
-  const { activity } = data || {};
   return (
     <div className="">
-      <ActivityChart activity={activity} />
+      <ActivityChart/>
     </div>
   );
 };
