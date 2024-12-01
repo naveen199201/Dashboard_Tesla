@@ -1,6 +1,7 @@
 import React from "react";
 import { useFetchJson } from "../hooks/useFetchJson";
 import ProgressBar from "./ProgressBar";
+import Image from "next/image";
 
 type WeakTopics = {
   name: string;
@@ -24,7 +25,8 @@ const WeakestTopics: React.FC = () => {
       {topics?.weakest?.map((item, index) => (
         <div key={index} className="flex">
           <div className="w-1/12  py-6">
-          <img src={item.image} alt="image" />
+          <Image src={item.image} alt="image" />
+          {/* <img src={item.image} alt="image" /> */}
           </div>
           <div className="w-11/12 m-2">
           <h6 className="pl-3">{item.name}</h6>

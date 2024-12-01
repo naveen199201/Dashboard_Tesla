@@ -18,14 +18,14 @@ const Users: React.FC<UserSelectorProps> = ({ groupData, onSelectionChange }) =>
   };
 
   // Handle user selection
-  const handleUserSelection = (user: string) => {
-    const isSelected = selectedUsers.includes(user);
-    const updatedUsers = isSelected
-      ? selectedUsers.filter((u) => u !== user)
-      : [...selectedUsers, user];
-    setSelectedUsers(updatedUsers);
-    onSelectionChange(updatedUsers);
-  };
+  // const handleUserSelection = (user: string) => {
+  //   const isSelected = selectedUsers.includes(user);
+  //   const updatedUsers = isSelected
+  //     ? selectedUsers.filter((u) => u !== user)
+  //     : [...selectedUsers, user];
+  //   setSelectedUsers(updatedUsers);
+  //   onSelectionChange(updatedUsers);
+  // };
 
   // Handle removing a user from the selected list
   const removeUser = (user: string) => {

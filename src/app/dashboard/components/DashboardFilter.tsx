@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import FilterDropdown from "@/app/utils/FilterDropDown";
-import PeopleFilter from "@/app/utils/PeopleFilter";
+// import PeopleFilter from "@/app/utils/PeopleFilter";
 
 const DashboardFilter: React.FC = () => {
   const [filter, setFilter] = useState<"7 Days" | "Month" | "Custom">("7 Days");
 
   const handleFilterChange = (selectedFilter: "7 Days" | "Month" | "Custom") => {
     setFilter(selectedFilter);
-    console.log(`Selected Filter: ${selectedFilter}`);
+    console.log(`Selected Filter: ${filter}`);
   };
 
   return (

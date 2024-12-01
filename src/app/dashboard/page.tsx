@@ -9,7 +9,7 @@ import WeakTopics from "./components/WeakTopics";
 import UserLeaderboard from "./components/UserLeaderboard";
 import GroupLeaderboard from "./components/GroupLeaderbaord";
 import Metrics from "./components/Metrics";
-import { useFetchJson } from "./hooks/useFetchJson";
+// import { useFetchJson } from "./hooks/useFetchJson";
 import Activity from "./components/Activity";
 
 const DashboardPage: React.FC = () => {
