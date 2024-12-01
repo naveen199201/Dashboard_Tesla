@@ -3,7 +3,7 @@ import { useFetchJson } from "../hooks/useFetchJson";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
-// import Image from "next/image";
+import Image from "next/image";
 
 type UserLeaderboardData = [
   {
@@ -24,12 +24,12 @@ const UserLeaderboard: React.FC = () => {
 
   const { user_leaderboard } = data || {};
   console.log(user_leaderboard);
-  const sortedLeaderboard = [...user_leaderboard].sort(
+  const sortedLeaderboard = [...(user_leaderboard as unknown[])].sort(
     (a, b) => b.accuracy_percentage - a.accuracy_percentage
   );
 
 
-  const getArrow = (current, previous) => {
+  const getArrow = (current:number, previous:number) => {
     if (current > previous) return <FontAwesomeIcon icon={faCaretUp} className="text-green-500"/>
     if (current < previous) return <FontAwesomeIcon icon={faCaretDown} className="text-red-500"/>
     return ""; // No change
@@ -39,7 +39,7 @@ const UserLeaderboard: React.FC = () => {
     <div className="container mx-auto p-6">
       <h2 className="text-md  mb-4 text-gray-500">User Leaderboard</h2>
       <div className="">
-        {sortedLeaderboard.map((player, index) => {
+        {sortedLeaderboard.map((player:UserLeaderboardData, index:number) => {
           const changeArrow = getArrow(
             player.accuracy_percentage,
             player.previous_accuracy_percentage
@@ -50,7 +50,7 @@ const UserLeaderboard: React.FC = () => {
               className="flex justify-between items-center py-2 mb-3 "
             >
               <div className="flex items-center">
-                <img
+                <Image
                   src={player.image}
                   alt={player.name}
                   className="w-8 h-8 rounded-full mr-3"

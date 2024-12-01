@@ -23,11 +23,11 @@ const GroupLeaderboard: React.FC = () => {
 
   const { groups_leaderboard } = data || {};
   console.log(groups_leaderboard);
-  const sortedLeaderboard = [...groups_leaderboard].sort(
+  const sortedLeaderboard = [...(groups_leaderboard as unknown[])].sort(
     (a, b) => b.accuracy_percentage - a.accuracy_percentage
   );
 
-  const getArrow = (current, previous) => {
+  const getArrow = (current: number, previous: number) => {
     if (current > previous) return <FontAwesomeIcon icon={faCaretUp} className="text-green-500"/>
     if (current < previous) return <FontAwesomeIcon icon={faCaretDown} className="text-red-500"/>
     return ""; // No change
