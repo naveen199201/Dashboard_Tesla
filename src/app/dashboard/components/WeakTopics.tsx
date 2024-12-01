@@ -25,7 +25,7 @@ const WeakestTopics: React.FC = () => {
       {topics?.weakest?.map((item, index) => (
         <div key={index} className="flex">
           <div className="w-1/12  py-6">
-          <Image src={item.image} alt="image" />
+          <img src={item.image} alt="image"  className="w-8 h-8 rounded-full mr-3"/>
           {/* <img src={item.image} alt="image" /> */}
           </div>
           <div className="w-11/12 m-2">

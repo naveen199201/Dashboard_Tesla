@@ -24,7 +24,7 @@ const StrongestTopics: React.FC = () => {
       {topics?.strongest?.map((item, index) => (
         <div key={index} className="flex justify-items-center">
           <div className="w-1/12 py-6 ">
-          <img src={item.image} alt="image" />
+          <img src={item.image} alt="image" className="w-8 h-8 rounded-full mr-3"/>
           </div>
           <div className="w-11/12 m-2">
             <h6 className="pl-3">{item.name}</h6>

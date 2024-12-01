@@ -50,9 +50,10 @@ const UserLeaderboard: React.FC = () => {
               className="flex justify-between items-center py-2 mb-3 "
             >
               <div className="flex items-center">
-                <Image
+                <img
                   src={player.image}
                   alt={player.name}
+                  
                   className="w-8 h-8 rounded-full mr-3"
                   
                 />
