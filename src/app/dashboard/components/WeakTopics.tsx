@@ -1,7 +1,6 @@
 import React from "react";
 import { useFetchJson } from "../hooks/useFetchJson";
 import ProgressBar from "./ProgressBar";
-import Image from "next/image";
 
 type WeakTopics = {
   name: string;

@@ -3,7 +3,6 @@ import { useFetchJson } from "../hooks/useFetchJson";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import Image from "next/image";
 
 type UserLeaderboardData = [
   {
